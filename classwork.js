@@ -39,12 +39,38 @@ var preview = {
 * Return 	isEnabled (string)
 */
 
+
+/*function returnE(a) {
+	console.log(a.enabled);
+	var isEnabled = "" + a.enabled + "";
+	console.log(isEnabled);
+	console.log(typeof isEnabled);
+	return isEnabled;
+}
+
+console.log(returnE(preview));
+*/
+
+
 /*
 * Function that changes the value from the key "enabled" to true, and returns 
 * the value from the key "enabled"
 *
 * Return 	value from key enabled (boolean)
 */
+
+
+/*function enable(run) {
+	console.log(run.enabled);
+	run.enabled = true;
+	console.log(run.enabled);
+	console.log(typeof run.enabled);
+	return(run.enabled);
+}
+
+console.log(enable(preview));
+*/
+
 
 /*
 * Function that retrieves the urls only from the key "resolutions" 
@@ -53,6 +79,18 @@ var preview = {
 * Return 	urls (array)
 */
 
+	function resolutionsUrls(obj) {
+		//console.log(obj);
+		//console.log(obj.images);
+		
+		for (var key in obj.images[0].resolutions) {
+		//console.log(obj.images[0].resolutions[key].url);
+		var url = [obj.images[0].resolutions[key].url];
+		console.log(url);
+		}
+	}
+
+	resolutionsUrls(preview);
 /*
 * Function that retrieves the first nested key and value pairing
 * from the values of "images", stores them in a new object called 
