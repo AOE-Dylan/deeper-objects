@@ -79,27 +79,42 @@ console.log(enable(preview));
 * Return 	urls (array)
 */
 
+
+/*
 	function resolutionsUrls(obj) {
 		//console.log(obj);
 		//console.log(obj.images);
-		
-		for (var key in obj.images[0].resolutions) {
-		//console.log(obj.images[0].resolutions[key].url);
-		var url = [obj.images[0].resolutions[key].url];
-		console.log(url);
+		var urls = [];
+		var objKeyResolutions = obj.images[0].resolutions;
+		for (var key in objKeyResolutions) {
+			//console.log(objKeyResolutions[key].url);
+			urls.push(objKeyResolutions[key].url);
 		}
+		console.log(urls);
+		return urls;
 	}
-
+	
 	resolutionsUrls(preview);
+*/	
+
+
 /*
 * Function that retrieves the first nested key and value pairing
 * from the values of "images", stores them in a new object called 
 * "allKeyValuePairs", and returns the created object
-*
-* Format	var allKeyValuePairs = {
-*				keys: [],
-*				values: []
-*			};
-*
-* Return 	allKeyValuePairs (object)
+*/
+function pairs(obj) {
+	console.log(obj.images);
+
+}
+
+pairs(preview);
+
+/*var allKeyValuePairs = {
+	
+			keys: [],
+				values: []
+			};
+
+return allKeyValuePairs (obj);
 */
